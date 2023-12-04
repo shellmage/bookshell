@@ -4,10 +4,17 @@ from bookshell import items
 
 class ShelfSpider(scrapy.Spider):
     name = "books"
+    custom_settings = {
+		"FEEDS":{
+            "books.json":{"format":"json", "overwrite":"True"},
+           },
+    }
 
-    start_urls = [
-            f"https://www.goodreads.com/review/list/91502210?shelf=read",
-    ]
+    def __init__(self, *args, **kwargs):
+        super(ShelfSpider, self).__init__(*args, **kwargs)
+
+        self.start_urls = []
+        self.start_urls.append(kwargs.get('start_urls'))
 
     def parse(self, response):
         books = response.xpath('//*[@id="booksBody"]/tr')
