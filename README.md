@@ -2,20 +2,16 @@
 
 bookshell is an interactive python script that scrapes shelves/books from goodreads profiles using scrapy framework.
 
-### requirements
-
-```$ pip install scrapy```
-
+## Usage
 ### Installation
 
 ```
-$ git clone https://github.com/shellmage/bookshell.git
-$ cd bookshell/
-$ chmod +x bookshell.py
+$ curl  https://shellmage.github.io/bookshell
+$ chmod +x bookshell
+$ bookshell
 ```
 
-### Usage
-
+### CLI
 ```
 $ ./bookshell.py 
 Enter Goodreads username : shell_reads
@@ -53,6 +49,26 @@ The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Goo
 ملائكة وشياطين ( By Brown, Dan )  * * *  https://www.goodreads.com/book/show/10501957
 The Fault in Our Stars ( By Green, John )  * * *  https://www.goodreads.com/book/show/11870085-the-fault-in-our-stars
 ```
+
+## Development
+
+### depends
+- python3
+### Get project
+
+```
+$ git clone https://github.com/shellmage/bookshell.git
+$ cd bookshell/
+```
+
+### requirements
+
+```$ pip install scrapy pyinstaller```
+
+### run
+
+```$ ./bookshell.py```
+
 
 #### Note
 
